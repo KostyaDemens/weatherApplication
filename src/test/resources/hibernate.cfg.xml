@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.h2.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hibernate.connection.url">jdbc:h2:mem:weatherApplication;DB_CLOSE_DELAY=-1</property>
+        <property name="hibernate.connection.username"/>
+        <property name="hibernate.connection.password"/>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <mapping class="by.bsuir.kostyademens.weatherapplication.model.User"/>
+    </session-factory>
+</hibernate-configuration>
